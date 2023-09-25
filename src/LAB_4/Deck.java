@@ -1,9 +1,21 @@
 package LAB_4;
 
+
+import javax.print.DocFlavor;
+import java.util.Random;
+
+
 public class Deck {
     String suits[]= {"Diamonds", "spades","Hearts","Clubs"};
     String ranks[]= {"Ace","2","3","4","5","6","7","8","9","10","Jack","king","Queen"};
     Cards cards[] = new Cards[52];
+
+    String random[]= new String[52];
+
+
+
+
+
 
 
     Deck() {
@@ -25,4 +37,29 @@ public class Deck {
         }
         return str.toString();
     }
+
+    public void random() {
+
+        for (int i = 0; i < 52; i++) {
+
+            Random random1 = new Random();
+            int rand = random1.nextInt(52);
+            random[i] = String.valueOf(cards[rand]);
+            System.out.println(random[i]);
+        }
+//        Random random = new Random();
+//        for (int i = 0; i < 6000; i++) {
+//            int randomIndex = random.nextInt(52);
+//            Cards tem = cards[randomIndex];
+//            Cards[randomIndex]
+//        }
+
+
+    }
 }
+
+
+
+
+
+
